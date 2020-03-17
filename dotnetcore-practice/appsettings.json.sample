@@ -6,5 +6,6 @@
       "Microsoft.Hosting.Lifetime": "Information"
     }
   },
+  "ConnectionStrings": { "PracticeContext": "Server=localhost;User ID=postgres;Password=<你的密碼>;Database=practice" },
   "AllowedHosts": "*"
 }

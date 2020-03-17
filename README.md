@@ -38,23 +38,57 @@ b. 選擇[瀏覽] 搜尋 Npgsql.EntityFrameworkCore.PostgreSQL 套件
 	(打 npgsql 搜尋找名字一樣的 )
 c. 選擇安裝/ 按授權同意(我接受), 然後等待安裝
 
-7. 開始寫程式
 
 
+7. 開始寫程式先把跟 db 連結的部分寫起來 (DBContext)
+
+a. 在核心資料夾建立 EFModel 資料夾
+b. 建立類別 PracticeContext , 內容為
+
+using dotnetcore_practice.EFModel.Practice;
+using Microsoft.EntityFrameworkCore;
+
+namespace dotnetcore_practice.EFModel
+{
+    public class PracticeContext : DbContext
+    {
+        public virtual DbSet<Post> Posts { get; set; }      
+    }
+}
+
+這個檔案是負責來跟特定 DB 做溝通的, 接下來要建立跟資料表溝通的類別, 也就是上面的 Post
+
+c. 建立 EFModel 下的資料夾, Practice 資料夾, 將跟 Practice database 相關的類別歸檔,
+   然後建立 Post 類別, 內容為
+
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace dotnetcore_practice.EFModel.Practice
+{
+
+    [Table("posts")]
+    public class Post
+    {
+        [Key]
+        public long? ID { get; set; }
+        [Column("user_id")]
+        public long? userID { get; set; }
+        [Column]
+        public string title { get; set; }
+        [Column]
+        public string content { get; set; }
+        [Column("create_date")]
+        public DateTime? createDate { get; set; } 
+    }
+}
 
 
+以下部分現場教學說明
 
+8. 整合 mvc core 
 
-
-
-
-
-
-
-
-
-
-
-
+9. 開發
 
 

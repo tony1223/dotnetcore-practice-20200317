@@ -8,7 +8,7 @@ namespace dotnetcore_practice.EFModel.Practice
     [Table("posts")]
     public class Post
     {
-        [Key]
+        [Key,Column("id")]
         public long? ID { get; set; }
         [Column("user_id")]
         public long? userID { get; set; }

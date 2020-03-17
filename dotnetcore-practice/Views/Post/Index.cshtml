@@ -1,0 +1,26 @@
+﻿@using dotnetcore_practice.EFModel.Practice
+@model List<dotnetcore_practice.EFModel.Practice.Post>
+@{
+    ViewData["Title"] = "文章列表";
+}
+
+<div class="text-center">
+    <h1 class="display-4">文章列表</h1>
+    
+    <table class="table table-bordered">
+        <tr><td>標題</td><td>發表時間</td></tr>
+        @foreach (Post ar in Model)
+        {
+    <tr>
+        <td>@ar.title</td>
+        <td>@ar.createDate</td>
+    </tr>
+        }
+        @if (Model.Count == 0)
+        {
+            <tr>
+                <td colspan="2">沒有任何文章</td>
+            </tr>
+        }
+    </table>
+</div>
