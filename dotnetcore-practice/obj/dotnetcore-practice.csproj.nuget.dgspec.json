@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tonyq\\source\\repos\\dotnetcore-practice\\dotnetcore-practice\\dotnetcore-practice.csproj": {}
+    "C:\\workspaces\\dotnet\\dotnetcore-practice-20200317\\dotnetcore-practice\\dotnetcore-practice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tonyq\\source\\repos\\dotnetcore-practice\\dotnetcore-practice\\dotnetcore-practice.csproj": {
+    "C:\\workspaces\\dotnet\\dotnetcore-practice-20200317\\dotnetcore-practice\\dotnetcore-practice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tonyq\\source\\repos\\dotnetcore-practice\\dotnetcore-practice\\dotnetcore-practice.csproj",
+        "projectUniqueName": "C:\\workspaces\\dotnet\\dotnetcore-practice-20200317\\dotnetcore-practice\\dotnetcore-practice.csproj",
         "projectName": "dotnetcore-practice",
-        "projectPath": "C:\\Users\\tonyq\\source\\repos\\dotnetcore-practice\\dotnetcore-practice\\dotnetcore-practice.csproj",
+        "projectPath": "C:\\workspaces\\dotnet\\dotnetcore-practice-20200317\\dotnetcore-practice\\dotnetcore-practice.csproj",
         "packagesPath": "C:\\Users\\tonyq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tonyq\\source\\repos\\dotnetcore-practice\\dotnetcore-practice\\obj\\",
+        "outputPath": "C:\\workspaces\\dotnet\\dotnetcore-practice-20200317\\dotnetcore-practice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
