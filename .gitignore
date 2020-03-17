@@ -1,6 +1,6 @@
-bin
-obj
-data
-appsettings.json
+dotnetcore-practice/bin
+dotnetcore-practice/obj
+dotnetcore-practice/data
+dotnetcore-practice/appsettings.json
 
 .vs
